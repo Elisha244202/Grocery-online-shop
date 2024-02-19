@@ -1,0 +1,304 @@
+:root{
+  --main: orange;
+  --shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.1);
+  --white: #fff;
+  --black: #04061c; 
+  --border: .1rem solid rgba(255, 255, 255, .3);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  transition: .3s linear;
+}
+
+
+html{
+  font-size: 65.8%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.btn{
+  display: inline-block;
+  padding: .7rem 2rem;
+  border: 1px solid #04061c;
+  color: #04061c;
+  font-size: 1.3rem;
+}
+
+.btn:hover{
+  background: var(--main);
+  color: var(--white);
+  border-color: var(--main);
+}
+
+
+
+
+
+
+/* Header Section Start */
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 6rem;
+  align-items: center;
+  padding: 0 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.header .logo{
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  gap: .4rem;
+}
+
+.header .logo h3{
+  color: var(--black);
+}
+
+
+.header .menu a{
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  font-weight: 400;
+}
+
+.header .menu a:hover{
+  color: var(--main);
+}
+
+.header .icons i{
+  font-size: 1.8rem;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: .5rem;
+  margin: 0 .1rem;
+  background: hsl(0, 0%, 95%);
+}
+
+.header .icons i:hover{
+  background: var(--main);
+  color: #fff;
+}
+
+.header .fa-solid.fa-bars{
+  display: none;
+}
+
+.header .search{
+  position: absolute;
+  top: 110%; right: -100%;
+  width: 35rem;
+  height: 40px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+  padding-right: .9rem;
+}
+
+.header .search.active{
+  right: 2rem;
+}
+
+.header .search .search-bar{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  text-transform: none;
+  border-radius: .5rem;
+}
+
+.header .search .fa-solid{
+  font-size: 1.4rem;
+  cursor: auto;
+}
+
+.header .search .fa-solid:hover{
+  color: var(--main);
+}
+
+.header .cart-container{
+  position: absolute;
+  top: 110%; right: -22rem;
+  width: 22rem;
+  border: 1px solid rgb(218, 218, 218);
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+}
+
+.header .cart-container.active{
+  right: 2rem;
+}
+
+.header .cart-container .cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.header .cart-container .cart .price p{
+  padding: .2rem;
+  color: #939393;
+  text-align: left;
+}
+
+.header .cart-container .cart .price p:first-child{
+  font-size: 1.3rem;
+  color: var(--black);
+}
+
+.header .cart-container .total{
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 1.6rem;
+}
+
+.header .cart-container .cart img{
+  width: 6rem;
+}
+
+.header .cart-container .btn{
+  width: 100%;
+}
+
+.header .cart-container .cart .fa-solid.fa-trash{
+  font-size: 1.3rem;
+}
+.header .cart-container .cart .fa-solid.fa-trash:hover{
+  color: var(--main);
+}
+
+.header .login{
+  font-size: 90%;
+  position: absolute;
+  background: #fff;
+  width: 22rem;
+  top: 110%; right: -22rem;
+  border: 1px solid rgb(218, 218, 218);
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.header .login.active{
+  right: 2rem;
+}
+
+.header .login h3{
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.header .login input{
+  width: 100%;
+  padding: .8rem .5rem;
+  text-transform: none;
+  border: none;
+  outline: none;
+  background: hsl(0, 0%, 92%);
+  margin-bottom: 1rem;
+}
+
+.header .login p{
+  margin-bottom: 1rem;
+  color: #939393;
+}
+
+.header .login p span{
+  text-decoration: underline;
+  color: var(--main);
+}
+/* Header Section End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media(max-width: 770px){
+  .header{
+    padding: 0 2rem;
+  }
+}
+
+@media(max-width: 720px){
+  .header .menu{
+    position: absolute;
+    top: 110%;
+    right: -22rem;
+    width: 22rem;
+    border: 1px solid rgb(218, 218, 218);
+  }
+
+  .header .menu.active{
+    right: 2rem;
+  }
+
+  .header .menu a{
+    display: block;
+    padding: 1rem 1rem;
+  }
+
+  .header .icons .fa-solid.fa-bars{
+    display: inline-block;
+  }
+
+  .header .menu a:hover{
+    background: var(--main);
+    color: var(--white);
+  }
+}
+
+@media(max-width: 570px){
+  .header .search{
+    width: 90%;
+  }
+}
